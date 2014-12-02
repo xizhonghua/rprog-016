@@ -1,4 +1,7 @@
 # R Programming
 A repository for a coursera course "R Programming" by Roger D. Peng
 
-Homework2 [Air Pollution](hw2/)
+### Week1
+
+### Week2
+- Programming Assignment [Air Pollution](hw2/)
