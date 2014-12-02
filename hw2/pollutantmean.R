@@ -12,15 +12,22 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
     ## Return the mean of the pollutant across all monitors list
     ## in the 'id' vector (ignoring NA values)
     
+    ## select the col
     col <- if (pollutant == "sulfate") 2 else 3;
     
-    table <- c(NA);
+    ## create a empty (length = 0) numeric vector
+    table <- numeric();
     
+    ## loop each file id
     for(i in id) {
+        ## generate the filename
         filename <- sprintf("%s/%03d.csv", directory, i)
+        ## read the cvs, store the only needed column
         data <- read.csv(filename)[, col]
+        ## append the rows to the big table
         table <- c(table, data)
     }
     
+    ## remove the NAs, and compute the mean on all rows acrossing all files
     mean(table, na.rm = T)
 }
