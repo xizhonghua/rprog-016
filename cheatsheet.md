@@ -1,5 +1,19 @@
 ## R Cheat Sheet
 
-1. format a file name with fixed id with leading zeros
-  - ```>sprintf("%s/file_%03d.scv", "path/to/folder", 2)```
-  - ```[1] "path/to/folder/file_002.scv" ```
+**format a file name with fixed id with leading zeros**
+```R
+> sprintf("%s/file_%03d.scv", "path/to/folder", 2)```
+[1] "path/to/folder/file_002.scv"
+```
+
+**create a data frame with columns named as id, age and gender**
+```R
+> id <- c(1,2,3)
+> age <- c(20,18,22)
+> gender <- c("m", "f", "f")
+> data.frame(id, age, gender)
+  id age gender
+1  1  20      m
+2  2  18      f
+3  3  22      f
+```
