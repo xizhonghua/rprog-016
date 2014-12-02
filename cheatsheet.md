@@ -6,7 +6,7 @@ format a file name with **fixed** id length with **leading zeros**
 [1] "path/to/folder/file_002.csv"
 ```
 
-create a **data frame** with **columns names**
+create a **data frame** with **column names**
 ```R
 > id <- c(1,2,3)
 > age <- c(20,18,22)
