@@ -2,8 +2,8 @@
 
 **format a file name with fixed id with leading zeros**
 ```R
-> sprintf("%s/file_%03d.scv", "path/to/folder", 2)```
-[1] "path/to/folder/file_002.scv"
+> sprintf("%s/file_%03d.csv", "path/to/folder", 2)```
+[1] "path/to/folder/file_002.csv"
 ```
 
 **create a data frame with columns named as id, age and gender**
