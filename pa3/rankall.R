@@ -30,7 +30,7 @@ rankall <- function(outcome, num = "best") {
     for(s in statesNames) {
         
         ## filter the data by state
-        state.d = subset(d, State == s)
+        state.d <- subset(d, State == s)
         
         ## convert from charater to numeric
         state.d[, fullname] <- as.numeric(state.d[, fullname])
