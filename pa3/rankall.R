@@ -16,7 +16,7 @@ rankall <- function(outcome, num = "best") {
     )
     
     ## get the column name
-    fullname = fullnames[match(outcome, valid_outcome)]
+    fullname <- fullnames[match(outcome, valid_outcome)]
     
     ## find unique state names
     statesNames <- unique(d$State)
