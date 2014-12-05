@@ -29,20 +29,25 @@ rankall <- function(outcome, num = "best") {
     ## loop each state
     for(s in statesNames) {
         
+        ## filter the data by state
         state.d = subset(d, State == s)
         
+        ## convert from charater to numeric
         state.d[, fullname] <- as.numeric(state.d[, fullname])
     
+        ## sort based on 1. rate 2. name
         state.d <- state.d[order(state.d[fullname], state.d$Hospital.Name),]
-    
+        
+        ## find the total valid rows for 'worst' use
         l <- sum(complete.cases(state.d[fullname]))
     
-        ## row_idx
+        ## parse the row index
         row_idx <- if (num == 'best') 1 else if (num == 'worst') l else num
     
+        ## get the name of the hospital
         name <- state.d[row_idx,]$Hospital.Name
         
-        ## append result to vector
+        ## append results to vectors
         state <- c(state, s)
         hospital <- c(hospital, name)
     }
